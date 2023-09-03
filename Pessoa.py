@@ -12,14 +12,16 @@ class Pessoa(ABC):
     def nome(self) -> str:
         return self._nome
     
-    def set_nome(self, novo_nome: str):
+    @nome.setter
+    def nome(self, novo_nome: str):
         self._nome = novo_nome
 
     @property
     def idade(self) -> int:
         return self._idade
 
-    def set_idade(self, nova_idade: int):
+    @idade.setter
+    def idade(self, nova_idade: int):
         self._idade = nova_idade
 
 
